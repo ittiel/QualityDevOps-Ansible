@@ -1,0 +1,23 @@
+---
+
+- name: Ensure web based hello world container is running
+  docker:
+    name: qualitydevops
+    image: ittiel/qualitydevops
+    state: reloaded
+    ports:
+      - 8888:8080
+
+# - name: devops demo container
+#   docker_container:
+#     name: ittiel/qualitydevops
+#     image: ittiel/qualitydevops
+#     pull: always
+#     state: reloaded
+#     ports:
+#     - "8888:8080"
+#     restart_policy: on-failure
+#     restart_policy_retry: 3
+    
+#   tags:
+#     - latest

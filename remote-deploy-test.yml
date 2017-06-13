@@ -1,0 +1,10 @@
+- name:  
+  hosts: "{{ ec2_hosts }}"
+  gather_facts: false
+  remote_user: ubuntu
+  become: yes
+  gather_facts: false
+#  pre_tasks:
+#    - include_vars: ec2_vars/{{env}}/config.yml
+  roles:
+    - remote-deploy
