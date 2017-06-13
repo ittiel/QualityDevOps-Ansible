@@ -5,6 +5,7 @@
     name: qualitydevops
     image: ittiel/qualitydevops
     state: reloaded
+    pull: always
     ports:
       - 8888:8080
 
